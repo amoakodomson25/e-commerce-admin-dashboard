@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+
+.main-container {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* hidden until hover */
+  max-height: 100vh;     /* or any fixed height you want */
+  overflow-y: auto;      /* enable vertical scrolling */
+  overflow-x: hidden;    /* disable horizontal scrolling */
+}
+
+/* Chrome, Edge, Safari */
+.main-container::-webkit-scrollbar {
+  width: 6px; /* thin scrollbar */
+}
+
+.main-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Show on hover */
+.main-container:hover::-webkit-scrollbar-thumb {
+  background-color: #4f46e5; /* custom color */
+}
+
+.main-container:hover {
+  scrollbar-color: #4f46e5 #e5e7eb; /* Firefox on hover */
+}
+li{
+  cursor: pointer;
+}
